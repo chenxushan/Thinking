@@ -40,7 +40,8 @@
     if(isDarkMode && false) conf.theme = 'dark';
     mermaid.initialize({ startOnLoad: false});
     window.$docsify = {
-      name: '<i class="material-icons">home</i>&nbsp; Sunniberg',  // home图标
+      // name: '<i class="material-icons">home</i>&nbsp; Sunniberg',  // home图标
+      name: '<img src="_media/name.jpeg"></img>',
       repo:'true', // set the docsify show the corner
       corner: {
         // the icon link url to another site  
@@ -92,9 +93,9 @@
       loadFooter: true,
       loadFooter: '_footer.md',
       autoFooter: {
-        name:      "String",          // company display name (required)
+        name:      "公众号:music_movie_love",          // company display name (required)
         copyYear:  2020,             // start copyright year (required)
-        url:       "String",          // company url (optional)
+        url:       "公众号:mover",          // company url (optional)
         policy:    "",   // show Privacy Policy (optional)
         terms:     "",   // show Terms of Service (optional)
         cookies:   ""    // show Cookies Policy (optional)
@@ -140,20 +141,27 @@
   <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-corner/dist/docsify-corner.min.js"></script>
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'Sunniberg/Thinking'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
   <!-- 评论 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script>
     const gitalk = new Gitalk({
-      clientID: '2e9677843c4746472164',
-      clientSecret: '7af6573bbab3cd4a94fd27dbf178d6c6c119a025',
-      repo: 'docsifyGuide',
-      owner: 'pycrab',
-      admin: ['pycrab'],
+      clientID: 'e48382dfd2dcd8743696',
+      clientSecret: '9441c9d9af3cdfb2a3c69cc86b4982554d8d2661',
+      repo: 'Thinking',
+      owner: 'chenxushan',
+      admin: ['chenxushan'],
       distractionFreeMode: true
     })
   </script>
+  
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script> -->
 </body>
 </html>
