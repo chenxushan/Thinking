@@ -9,5 +9,7 @@
 - 古典文学 📊
 	- [菜根谭](cgt/cgt.md)
 	- [明清小说](MQNovels/mq.md)
+- 优秀站点📊
+    - [娱乐](sites/recommend.md)
 
 <div id="mb-footer"></div>
