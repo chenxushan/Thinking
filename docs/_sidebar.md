@@ -11,5 +11,8 @@
 	- [明清小说](MQNovels/mq.md)
 - 优秀站点📊
     - [娱乐](sites/recommend.md)
+    - [工具](sites/tools.md)
+    - [艺术](sites/arts.md)
+    - [健康生活](sites/life.md)
 
 <div id="mb-footer"></div>
