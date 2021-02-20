@@ -14,3 +14,7 @@ https://www.yinfans.me/
 - [Multiavatar](https://multiavatar.com/):一个在线工具，可以根据输入的文字，生成用户头像图片
 - [Electronic References](https://csgordon.github.io/books.html):该网页收集网上免费的计算机科学教科书。
 - [最繁忙的航线](https://www.oag.com/busiest-routes-right-now):该网站可以查看世界各地的航线数据，比如本月最繁忙的10条国际和地区航线，以及各国国内最繁忙的航线。
+- [Excalidraw](https://blog.excalidraw.com/one-year-of-excalidraw/):Excalidraw 是手绘风格的一个在线作图工具，2020年1月发布。本文讲述这个项目一年来的惊人发展。
+- [locust](https://locust.io/):一个开源的负载压测工具
+- [HTML Editor](https://no-gravity.github.io/html_editor/):一个最简易的 HTML 在线编辑器，可以实时自动预览效果。源码非常简单，有学习价值。
+- [Thumbnail.AI](https://thumbnail.ai/): 这个在线服务可以为任意 URL，自动生成标题图片，便于在社交媒体引用文章时，提供缩略图。
