@@ -10,8 +10,8 @@
 	- [菜根谭](cgt/cgt.md)
 	- [明清小说](MQNovels/mq.md)
 - AIGC
-    - [Coding]
-    - [AI]
+    - [Coding](coding/itnav.md)
+    - [AI](aigc/ainav.md)
 - 优秀站点📊
     - [娱乐](sites/recommend.md)
     - [工具](sites/tools.md)
