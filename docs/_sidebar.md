@@ -9,6 +9,9 @@
 - 古典文学 📊
 	- [菜根谭](cgt/cgt.md)
 	- [明清小说](MQNovels/mq.md)
+- AIGC
+    - [Coding]
+    - [AI]
 - 优秀站点📊
     - [娱乐](sites/recommend.md)
     - [工具](sites/tools.md)
