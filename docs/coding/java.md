@@ -244,6 +244,86 @@ System.out.println(stack.peek());
 stack.pop();
 System.out.println(stack.size());
 System.out.println(stack.isEmpty());
+
+// 以下情况使用 ArrayList :
+// 频繁访问列表中的某一个元素。
+// 只需要在列表末尾进行添加和删除元素操作.
+
+// 以下情况使用 LinkedList :
+// 你需要通过循环迭代来访问列表中的某些元素。
+// 需要频繁的在列表开头、中间、末尾等位置进行添加和删除元素操作。
+
+// 对于双端队列来说，可以使用
+LinkedList<T> deque = new LinkedList<>();
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+// 使用 addFirst() 在头部添加元素
+sites.addFirst("Wiki");
+System.out.println(sites);
+//[Wiki, Google, Runoob, Taobao]
+
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+// 使用 addLast() 在尾部添加元素
+sites.addLast("Wiki");
+System.out.println(sites);
+//[Google, Runoob, Taobao, Wiki]
+
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+sites.add("Weibo");
+// 使用 removeFirst() 移除头部元素
+sites.removeFirst();
+System.out.println(sites);
+//[Runoob, Taobao, Weibo]
+
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+sites.add("Weibo");
+// 使用 removeLast() 移除尾部元素
+sites.removeLast();
+System.out.println(sites);
+//[Google, Runoob, Taobao]
+
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+sites.add("Weibo");
+// 使用 getFirst() 获取头部元素
+System.out.println(sites.getFirst());
+//Google
+
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+sites.add("Weibo");
+// 使用 getLast() 获取尾部元素
+System.out.println(sites.getLast());
+// Weibo
+
+// 还可以遍历
+LinkedList<String> sites = new LinkedList<String>();
+sites.add("Google");
+sites.add("Runoob");
+sites.add("Taobao");
+sites.add("Weibo");
+for (int size = sites.size(), i = 0; i < size; i++) {
+    System.out.println(sites.get(i));
+}
+// Google
+// Runoob
+// Taobao
+// Weibo
 ```
 
 ----
@@ -455,6 +535,108 @@ public static List<Integer> treeByLevels(Node node)
     }
     return result;
 }
+
+public class BinaryTreeTraversal {
+    // 前序遍历
+    public void preOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    // 中序遍历
+    public void inOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        System.out.print(root.val + " ");
+        inOrder(root.right);
+    }
+
+    // 后序遍历
+    public void postOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.val + " ");
+    }
+
+    // 前序遍历
+    public void preOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            System.out.print(node.val + " ");
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+    }
+
+    // 中序遍历
+    public void inOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+
+        while (current != null || !stack.isEmpty()) {
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+
+            current = stack.pop();
+            System.out.print(current.val + " ");
+            current = current.right;
+        }
+    }
+
+    // 后序遍历
+    public void postOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+        stack1.push(root);
+
+        while (!stack1.isEmpty()) {
+            TreeNode node = stack1.pop();
+            stack2.push(node);
+
+            if (node.left != null) {
+                stack1.push(node.left);
+            }
+            if (node.right != null) {
+                stack1.push(node.right);
+            }
+        }
+
+        while (!stack2.isEmpty()) {
+            System.out.print(stack2.pop().val + " ");
+        }
+    }
+
 ```
 
 字符串相关的题:判断句子是否为全字母句
@@ -552,3 +734,27 @@ public List<String> removeSubfolders(String[] folder) {
         return false;
     }
 ```
+有些题目可以Map<Key,int[]> map;数据结构
+要是对value集合排序是，可以用map.values得到一个Collection<int[]>, 然后对其进行排序。
+List.sort()
+Collections.sort(List<T>list,Comparator<? super T> c);
+
+```java
+opArray.sort(new Comparator<IoRecord>() {
+              @Override
+              public int compare(IoRecord o1, IoRecord o2) {
+                  return (o1.startAddr != o2.startAddr)?(o1.startAddr - o2.startAddr): (o1.endAddr- o2.endAddr);
+              }
+          });
+
+ opArray.stream()
+        .sorted((o1, o2) -> (o1.startAddr != o2.startAddr) ? (o1.startAddr - o2.startAddr) : (o1.endAddr - o2.endAddr))
+         collect(Collectors.toList());
+// 上面两个排序等价吗？
+// 这两种写法实际上是不等价的。
+// 第一种写法使用了opArray.sort()方法来对原始数组进行排序，而第二种写法使用了opArray.stream().sorted()方法来创建一个新的排序后的列表。
+// opArray.sort()方法会直接修改原始数组的顺序，而opArray.stream().sorted()方法则会返回一个新的排序后的列表，而不会修改原始数组。
+// 因此，如果你希望修改原始数组的顺序，应该使用第一种写法；如果你希望得到一个新的排序后的列表，应该使用第二种写法。
+```
+
+		
